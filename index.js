@@ -3,7 +3,13 @@ let mainContainer = document.getElementById('main-container');
 let newitem = document.getElementById('todoContainer');
 let newVal = document.getElementById('input');
 let listItems = document.getElementById('list-items')
+
+
+
 document.addEventListener('keyup',pressEnter);
+document.addEventListener('dblclick', deleteItem);
+document.addEventListener('click', doneItem);
+
 
 function pressEnter(event)
 {
@@ -15,4 +21,18 @@ function pressEnter(event)
         listItems.appendChild(item);
         newVal.value = '';
     }
+}
+
+
+function deleteItem(event)
+{
+    const delElement = document.querySelector('li');
+    delElement.remove();
+}
+
+
+function doneItem(event)
+{
+    const doneTask = document.querySelector('li');
+    doneTask.style.textDecoration = ' line-through';
 }
