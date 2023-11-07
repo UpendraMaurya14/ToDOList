@@ -31,8 +31,27 @@ function deleteItem(event)
 }
 
 
-function doneItem(event)
-{
-    const doneTask = document.querySelector('li');
-    doneTask.style.textDecoration = ' line-through';
+// function doneItem(event)
+// {
+//     const doneTask = event.target;
+//     // doneTask.style.textDecoration = ' line-through';
+//     if(doneTask.id && doneItem.id == 'input')
+//     {
+//         return ;
+//     }
+//     doneTask.style.textDecoration = ' line-through';
+// }
+
+
+function doneItem(event) {
+    const doneTask = event.target;
+    if (doneTask.id && doneTask.id === 'input') {
+        return;
+    }
+
+    if (doneTask.style.textDecoration == "line-through") {
+        doneTask.style.textDecoration = "none";
+    } else {
+        doneTask.style.textDecoration = "line-through";
+    }
 }
