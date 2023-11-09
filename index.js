@@ -6,15 +6,13 @@ let listItems = document.getElementById('list-items')
 
 
 
-document.addEventListener('keyup',pressEnter);
+document.addEventListener('keyup', pressEnter);
 document.addEventListener('dblclick', deleteItem);
 document.addEventListener('click', doneItem);
 
 
-function pressEnter(event)
-{
-    if(event.key == "Enter")
-    {
+function pressEnter(event) {
+    if (event.key == "Enter") {
         const node = document.createTextNode(newVal.value);
         const item = document.createElement('li');
         item.appendChild(node);
@@ -24,23 +22,11 @@ function pressEnter(event)
 }
 
 
-function deleteItem(event)
-{
+function deleteItem(event) {
     const delElement = document.querySelector('li');
     delElement.remove();
 }
 
-
-// function doneItem(event)
-// {
-//     const doneTask = event.target;
-//     // doneTask.style.textDecoration = ' line-through';
-//     if(doneTask.id && doneItem.id == 'input')
-//     {
-//         return ;
-//     }
-//     doneTask.style.textDecoration = ' line-through';
-// }
 
 
 function doneItem(event) {
@@ -54,4 +40,11 @@ function doneItem(event) {
     } else {
         doneTask.style.textDecoration = "line-through";
     }
+
+
+
+
+    
 }
+
+
