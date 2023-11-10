@@ -41,10 +41,6 @@ function doneItem(event) {
         doneTask.style.textDecoration = "line-through";
     }
 
-
-
-
-    
 }
 
 
